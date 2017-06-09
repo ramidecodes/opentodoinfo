@@ -10,7 +10,7 @@ const app = express();
 app.use(compression());
 app.use(express.static('dist'));
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 // API call
@@ -27,6 +27,6 @@ app.listen(port, function(err){
   if (err) {
     console.log(err);
   } else {
-    open('https://localhost:' + port);
+    open('http://localhost:' + port);
   }
 });

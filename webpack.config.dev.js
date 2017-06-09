@@ -1,21 +1,20 @@
-import path from 'path';
+// import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-module.exports = {
+export default {
 
   devtool: 'source-map',
-  context: path.resolve(__dirname, './src'),
+  context: __dirname + '/src',
   entry: {
     app: './index.js',
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist'
+    path: __dirname + '/dist',
+    publicPath: '/dist/'
   },
-
   module: {
     rules: [
       {
@@ -28,11 +27,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader:  ExtractTextPlugin.extract({
-          use: 'css-loader?importLoaders=1',
-        }),
+        use: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use: "css-loader"
+				}),
       }
-
       // Loaders for other file types can go here
     ],
   },

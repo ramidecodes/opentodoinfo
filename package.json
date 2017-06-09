@@ -10,7 +10,7 @@
     "security-check": "nsp check",
     "lint": "esw webpack.confg.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
-    "local-tunnel": "lt --port 3000",
+    "local-tunnel": "lt --port 3000 --subdomain opentodo",
     "share": "npm-run-all --parallel open:src local-tunnel",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",

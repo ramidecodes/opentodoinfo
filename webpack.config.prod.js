@@ -1,22 +1,40 @@
-import path from 'path';
+// import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
-  debug: true,
   devtool: 'source-map',
-  noInfo: false,
   entry: {
-    vendor: path.resolve(__dirname, 'src/vendor'),
-    main: path.resolve(__dirname, 'src/index')
+    vendor: __dirname + '/src/vendor',
+    main: __dirname + '/src/index'
   },
   target: 'web',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-    filename: '[name].[chunkhash].js'
+    path: __dirname + '/dist',
+    filename: '[name].[chunkhash].js',
+    publicPath: '/'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015'] },
+        }],
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+					fallback: "style-loader",
+					use: "css-loader"
+				}),
+      }
+      // Loaders for other file types can go here
+    ],
   },
   plugins: [
     // Generate an external css file with a hash in the filename
@@ -29,7 +47,7 @@ export default {
       name: 'vendor'
     }),
     // Eliminate duplicate packages when generating bundle
-    new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.DedupePlugin(),
     // Minifi JS
     new webpack.optimize.UglifyJsPlugin(),
     // Create HTML file that includes reference to bundled JS.
@@ -50,10 +68,4 @@ export default {
       inject: true
     })
   ],
-  module: {
-    loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
-    ]
-  }
-}
+};

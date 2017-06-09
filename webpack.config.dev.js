@@ -1,30 +1,45 @@
 import path from 'path';
+import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
-export default {
-  debug: true,
-  devtool: 'inline-source-map',
-  noInfo: false,
-  entry: [
-    path.resolve(__dirname, 'src/index')
-  ],
-  target: 'web',
+module.exports = {
+
+  devtool: 'source-map',
+  context: path.resolve(__dirname, './src'),
+  entry: {
+    app: './index.js',
+  },
   output: {
-    path: path.resolve(__dirname, 'src'),
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist'
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: [/node_modules/],
+        use: [{
+          loader: 'babel-loader',
+          options: { presets: ['es2015'] },
+        }],
+      },
+      {
+        test: /\.css$/,
+        loader:  ExtractTextPlugin.extract({
+          use: 'css-loader?importLoaders=1',
+        }),
+      }
+
+      // Loaders for other file types can go here
+    ],
   },
   plugins: [
-    // Create HTML file that includes reference to bundled JS.
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      inject: true
-    })
+    new ExtractTextPlugin({
+      filename: '[name].bundle.css',
+      allChunks: true,
+    }),
   ],
-  module: {
-    loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
-    ]
-  }
-}
+};

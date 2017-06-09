@@ -7,11 +7,12 @@
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScripts/srcServer.js",
+    "open:dist": "babel-node buildScripts/distServer.js",
     "security-check": "nsp check",
     "lint": "esw webpack.confg.* src buildScripts --color",
     "lint:watch": "npm run lint -- --watch",
     "local-tunnel": "lt --port 3000 --subdomain opentodo",
-    "share": "npm-run-all --parallel open:src local-tunnel",
+    "share": "npm run local-tunnel",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData",
@@ -20,7 +21,7 @@
     "clean-dist": "rimraf ./dist && mkdir dist",
     "prebuild": "npm-run-all clean-dist test lint",
     "build": "babel-node buildScripts/build.js",
-    "postbuild": "babel-node buildScripts/distServer.js",
+    "postbuild": "npm run open:dist",
     "deploy": "surge ./dist"
   },
   "repository": {

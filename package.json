@@ -43,6 +43,7 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.16.3",
+    "bulma": "^0.4.2",
     "chai": "^4.0.2",
     "chalk": "^1.1.3",
     "cheerio": "^1.0.0-rc.1",

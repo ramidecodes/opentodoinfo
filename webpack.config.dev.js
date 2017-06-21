@@ -31,8 +31,15 @@ export default {
 					fallback: "style-loader",
 					use: "css-loader"
 				}),
-      }
+      },
       // Loaders for other file types can go here
+      {
+        test: /\.sass$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader: "css-loader!sass-loader",
+        }),
+      }
     ],
   },
   plugins: [

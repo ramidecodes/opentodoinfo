@@ -16,3 +16,4 @@
 
 import fetch from 'whatwg-fetch';
 // All the other libraries will go here
+import bulma from 'bulma';

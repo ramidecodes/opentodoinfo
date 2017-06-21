@@ -19,40 +19,111 @@
           <a href="#" class="nav-item">Qué es</a>
           <a href="#" class="nav-item">Quiénes los hacen</a>
           <a href="#" class="nav-item">Programación</a>
-          <a href="#" class="nav-item">Contacto</a>
+          <a href="#" class="nav-item button is-primary">Contacto</a>
         </div>
       </nav>
     </header>
 
-    <section id="intro">
-      <p>OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.
-        Te invitamos a tomar conciencia de las herramientas y las redes que tenemos disponibles como seres contemporáneos.
-        Creemos que son precisamente los vínculos que generamos en el hacer los que habilitan el desarrollo sustentable de cualquier emprendimiento.
-      </p>
-      <button type="button" name="Descrubre Más" class="button is-primary is-outlined">Descrubre Más</button>
-    </section>
-
-    <section id="chronogram">
-      <h2>Cronograma - <span class="thin">15 de Julio</span></h2>
-    </section>
-
-    <section id="contact">
-      <h2>Contacto</h2>
-      <div class="description">
-        <p>Envianos un mensaje. Estamos del otro lado de la red.</p>
-      </div>
-      <div class="contact-form-box">
-        <form class="contact-form" action="index.html" method="post">
-          <label for="text">Tu Nombre</label>
-          <label for="email">Tu Correo</label>
-          <input type="text-area" name="Mensaje" value="Mensaje..">
-          <input type="submit" name="Enviar" value="Enviar">
-        </form>
+    <section id="intro" class="hero is-primary is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p>OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.
+            Te invitamos a tomar conciencia de las herramientas y las redes que tenemos disponibles como seres contemporáneos.
+            Creemos que son precisamente los vínculos que generamos en el hacer los que habilitan el desarrollo sustentable de cualquier emprendimiento.
+          </p>
+          <button type="button" name="Descrubre Más" class="button is-primary is-outlined is-large is-inverted">Descrubre Más</button>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <p>Diseño: <a href="http://eco-virtual.com" target="_blank">Ecovirtual</a></p>
+    <section id="chronogram" class="hero is-info is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h2 class="title is-2">Cronograma - <span class="subtitle is-3">15 de Julio</span></h2>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="hero is-danger is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h2 class="title is-2">Contacto</h2>
+          <div>
+            <p>Envianos un mensaje. Estamos del otro lado de la red.</p>
+          </div>
+          <div class="contact-form-box">
+            <form class="contact-form" action="index.html" method="post">
+            <div class="field is-horizontal">
+              <div class="field-body">
+                <div class="field is-grouped">
+                  <p class="control is-expanded has-icons-left">
+                    <input class="input" type="text" placeholder="Nombre">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </p>
+                </div>
+                <div class="field">
+                  <p class="control is-expanded has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="Email">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="field is-horizontal">
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Asunto...">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <textarea class="textarea" placeholder="Tu mensaje..."></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field is-horizontal">
+              <div class="field-label">
+                <!-- Left empty for spacing -->
+              </div>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <button class="button is-primary">
+                      Enviar Mesaje
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>Diseño: <a href="http://eco-virtual.com" target="_blank">Ecovirtual</a></p>
+        </div>
+      </div>
     </footer>
     <!-- <script type="text/javascript" src="bundle.js"></script> -->
     <script src="https://use.fontawesome.com/200c22b598.js"></script>

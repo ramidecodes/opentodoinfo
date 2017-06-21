@@ -1,4 +1,5 @@
 import './index.css';
+// import 'bulma';
 // import {getUsers, deleteUser} from './api/userApi';
 
 // Populate table of users via API call.

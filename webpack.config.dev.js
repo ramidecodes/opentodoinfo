@@ -1,19 +1,20 @@
-// import path from 'path';
-import webpack from 'webpack';
+import path from 'path';
+// import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
-
+  target: 'web',
   devtool: 'source-map',
-  context: __dirname + '/src',
+  context: path.resolve(__dirname, './src'),
   entry: {
-    app: './index.js',
+    vendor: './vendor',
+    main: './index'
   },
   output: {
-    filename: '[name].bundle.js',
-    path: __dirname + '/dist',
-    publicPath: '/dist/'
+    path: path.resolve(__dirname, 'src'),
+    filename: '[name].js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -27,25 +28,25 @@ export default {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-					fallback: "style-loader",
-					use: "css-loader"
-				}),
+        use: [ 'style-loader', 'css-loader' ]
       },
       // Loaders for other file types can go here
       {
         test: /\.sass$/,
-        loader: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader: "css-loader!sass-loader",
-        }),
+        use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       }
     ],
   },
   plugins: [
-    new ExtractTextPlugin({
-      filename: '[name].bundle.css',
-      allChunks: true,
-    }),
+    // new ExtractTextPlugin({
+    //   filename: '[name].bundle.css',
+    //   allChunks: true,
+    // }),
+    // new ExtractTextPlugin('styles.css')
+    // Create HTML file that includes reference to bundled JS.
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: true
+    })
   ],
 };

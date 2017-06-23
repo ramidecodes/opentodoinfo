@@ -2,7 +2,14 @@
 body .title{
   font-weight: 600;
 }
+body .control.has-icons-left .icon, body .control.has-icons-right .icon {
+    height: 1.8em;
+    width: 1.8em;
+}
 /* Sticky Header */
+body{
+  padding-top: 52px !important;
+}
 header.is-fixed-top {
     position: fixed;
     top: 0;

@@ -7,8 +7,8 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 export default {
   devtool: 'source-map',
   entry: {
-    vendor: __dirname + '/src/vendor',
-    main: __dirname + '/src/index'
+    main: __dirname + '/src/index',
+    vendor: __dirname + '/src/vendor'
   },
   target: 'web',
   output: {

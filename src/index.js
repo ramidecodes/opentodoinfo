@@ -1,7 +1,9 @@
 import './vendor.js';
 import './index.css';
 
-/* eslint-disable no-undef */
+/* eslint-disable no-undef no-console*/
+// Do everything after On DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function(){
 
 // Setup Particles Configuration and initialize it
 const particlesConfig = {
@@ -24,11 +26,6 @@ const particlesConfig = {
       },
       "polygon": {
         "nb_sides": 5
-      },
-      "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
       }
     },
     "opacity": {
@@ -37,7 +34,7 @@ const particlesConfig = {
       "anim": {
         "enable": false,
         "speed": 1,
-        "opacity_min": 0.5,
+        "opacity_min": 0.7,
         "sync": false
       }
     },
@@ -55,12 +52,12 @@ const particlesConfig = {
       "enable": true,
       "distance": 144.30361480555078,
       "color": "#ffffff",
-      "opacity": 0.55,
+      "opacity": 0.75,
       "width": 1.8
     },
     "move": {
       "enable": true,
-      "speed": 4,
+      "speed": 3,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -127,6 +124,27 @@ function toggleNav() {
     }
 }
 document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
+
+// Toggle behaviour for dropdowns
+var dropdownList = document.body.querySelectorAll('.dropdown-toggle');
+
+function toggleDropdown() {
+  var target = this.parentNode.parentNode.querySelector(this.getAttribute('data-target'));
+  target.classList.toggle('is-hidden');
+}
+for (var dropElement of dropdownList){
+  dropElement.addEventListener('click', toggleDropdown );
+}
+
+});
+// End of OnDOMLoad
+
+
+
+// let index = 0;
+// for( index=0; index < dropdownList.length; index++ ) {
+//   dropdownList[index].addEventListener('click', toggleDropdown() );
+// }
 
 // var button = document.querySelector('.is-dropdown');
 // var dropdown = document.querySelector('.dropdown');

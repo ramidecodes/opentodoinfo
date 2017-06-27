@@ -34,7 +34,16 @@ export default {
       {
         test: /\.sass$/,
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
+      },
+      {
+    test: /\.(gif|png|jpe?g|svg)$/i,
+    loaders: [
+      'file-loader',
+      {
+        loader: 'image-webpack-loader',
       }
+    ]
+  }
     ],
   },
   plugins: [

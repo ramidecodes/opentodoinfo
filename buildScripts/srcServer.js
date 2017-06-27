@@ -18,6 +18,8 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, '../src/index.html'));
 });
+// Setup Static asset folder
+app.use('/images', express.static(path.join(__dirname, '../src/images')));
 
 app.listen(port, function(err){
   if (err) {

@@ -7,6 +7,12 @@ body, button, input, select, textarea{
 body small {
   font-size: 1em;
 }
+header h1 a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #444;
+}
 body .title{
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -33,16 +39,19 @@ nav .nav-item {
   font-size: 1.3rem;
 }
 nav .nav-left h1 {
-    padding: 3px 10px;
+    padding: 0px 10px;
 }
 /* Hero Section Styles */
+#intro {
+  background: url("./images/galaxy-background-blured.jpg") no-repeat fixed;
+  background-size: cover;
+}
 .hero p {
   font-size: 1.4rem;
   font-weight: normal;
 }
-#intro {
-  background: url("./images/galaxy-background-blured.jpg") no-repeat fixed;
-  background-size: cover;
+#intro.hero p{
+  font-size: 2rem;
 }
 /* Particles Styles */
 canvas {

@@ -11,16 +11,20 @@
     <header class="header is-fixed-top">
       <nav class="nav has-shadow">
         <div class="nav-left">
-          <h1><a href="https://opentodo.info"><img src="./images/OpenTodo-Logo-Black.png" alt="OpenTodo" width="92px" height="auto"></a></h1>
+          <h1><a href="https://opentodo.info">
+            <!-- <img src="./images/OpenTodo-Logo-Black.png" alt="OpenTodo" width="92px" height="auto"> -->
+            OpenTodo
+          </a></h1>
         </div>
         <div class="nav-center">
           <a href="https://www.facebook.com/opentodo/" target="_blank" class="nav-item"><span class="icon"><i class="fa fa-facebook"></i></span></a>
+          <a href="#" target="_blank" class="nav-item"><span class="icon"><i class="fa fa-share-alt"></i></span></a>
         </div>
         <div id="nav-menu" class="nav-right nav-menu">
-          <a href="#" class="nav-item">Qué es</a>
-          <a href="#" class="nav-item">Quiénes los hacen</a>
+          <a href="#intro" class="nav-item">Qué es</a>
+          <!-- <a href="#" class="nav-item">Quiénes los hacen</a> -->
           <a href="#chronogram" class="nav-item">Programación</a>
-          <a href="#" class="nav-item">Contacto</a>
+          <a href="#contact" class="nav-item">Contacto</a>
         </div>
         <span id="nav-toggle"class="nav-toggle">
           <span></span>
@@ -36,7 +40,6 @@
             <div class="columns">
               <div class="column is-half is-offset-one-quarter">
                 <p>OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.
-                  Te invitamos a tomar conciencia de las herramientas y las redes que tenemos disponibles como seres contemporáneos.</p>
                   <br>
                   <button type="button" name="Descrubre Más" class="button is-primary is-outlined is-large is-inverted">Descrubre Más</button>
               </div>
@@ -67,7 +70,7 @@
                   <div class="content">
                     <p>La danza contemporánea, en un contexto urbano, propone la sensibilización y reflexión sobre el uso del espacio público y privado.
                     Esto habilita nuevos posibilidades de composición y estrategias para la visibilización del arte en entornos no convencionales.</p>
-                    <a>@conradoparkour</a>. <a>#Movimiento</a> <a>#Danza</a>
+                    <p><a href="https://twitter.com/sabrinatol" target="_blank">@SabrinaTol</a> #Movimiento #Danza #Parkour</p>
                     <br>
                     <p><strong>15hs - 15 Jul 2017</strong></p>
                   </div>
@@ -95,7 +98,7 @@
                     <p>Es un espacio de convergencia y networking, para compartir proyectos, experiencias y puntos de vista.
                     Un lugar donde descubrir emprendimientos locales y colaborar para fortalecer el vínculo entre creativos y hacedores.
                     Te invitamos a conocer a los que hacen y abrir nuevas posibilidades de colaboración interdisciplinaria.</p>
-                    <a>@feriadehacedores</a> <a>#Hacedores</a> <a>#Feria</a>
+                    <p><a>#FeriadeHacedores</a></p>
                     <br>
                     <p><strong>15hs - 15 Jul 2017</strong></p>
                   </div>
@@ -121,7 +124,7 @@
                 <div id="card-content-3" class="card-content is-hidden">
                   <div class="content">
                     <p>Próximamente.</p>
-                    <a>@eco_virtual</a> <a>#OpenSource</a> <a>#HerramientasDigitales</a>
+                    <p><a href="https://twitter.com/eco_virtual" target="_blank">@eco_virtual</a> <a>#OpenSource</a> <a>#HerramientasDigitales</a></p>
                     <br>
                     <p><strong>18 hs - 15 Jul 2017</strong></p>
                   </div>
@@ -151,7 +154,7 @@
                   <div class="content">
                     <p>Profesionales, investigadores, curiosos y apasionados en de diversas disciplinas comparten sus experiencias y conocimientos
                     en breves charlas. Invitados locales y por videoconferencia.</p>
-                    <a>@conradoparkour</a>. <a>#Movimiento</a> <a>#Danza</a>
+                    <p><a>#CharlasMaestras</a></p>
                     <br>
                     <p><strong>15hs - 15 Jul 2017</strong></p>
                   </div>
@@ -179,7 +182,7 @@
                     <p>Existen temas tabú, políticamente incorrectos por las fuertes implicaciones que tiene en la vida cotidiana.
                       Proponemos un espacio seguro, libre de juicios morales para abrir el diálogo sobre lo que nos afecta intrínsecamente como sociedad
                       pero no cuenta con canales para su sano desarrollo.</p>
-                    <a>@walterk</a>. <a>#Psicodélicos</a> <a>#Consciencia</a>
+                    <p><a>#Psicodélicos</a> <a>#Consciencia</a></p>
                     <br>
                     <p><strong>21:30 hs - 15 Jul 2017</strong></p>
                   </div>
@@ -204,8 +207,8 @@
                 </header>
                 <div id="card-content-6" class="card-content is-hidden">
                   <div class="content">
-                    <p>Porque la Cultura Libre también ha de ser celebrada</p>
-                    <a>@DJalgo</a>. <a>#OpenFiesta</a> <a>#CelebralaVida</a>
+                    <p>Estamos manifestando juntos y encendidos. ¡Es oportuno celebrar!</p>
+                    <p><a>#OpenFiesta</a> <a>#CelebralaVida</a></p>
                     <br>
                     <p><strong>23 hs - 15 Jul 2017</strong></p>
                   </div>
@@ -217,7 +220,6 @@
                 </footer>
               </div>
             </div>
-
           </div>
         </div>
       </div>
@@ -233,12 +235,12 @@
               </div>
               <div class="column is-half">
                 <div class="contact-form-box">
-                  <form class="contact-form" action="index.html" method="post">
+                  <form id="contact-form" class="contact-form" action="/contact" method="post">
                     <div class="field is-horizontal">
                       <div class="field-body">
                         <div class="field is-grouped">
                           <p class="control is-expanded has-icons-left">
-                            <input class="input" type="text" placeholder="Nombre">
+                            <input class="input" type="text" name="name" placeholder="Nombre">
                             <span class="icon is-small is-left">
                               <i class="fa fa-user"></i>
                             </span>
@@ -246,7 +248,7 @@
                         </div>
                         <div class="field">
                           <p class="control is-expanded has-icons-left has-icons-right">
-                            <input class="input" type="email" placeholder="Email">
+                            <input class="input" type="email" name="email" placeholder="Email">
                             <span class="icon is-small is-left">
                               <i class="fa fa-envelope"></i>
                             </span>
@@ -262,7 +264,7 @@
                       <div class="field-body">
                         <div class="field">
                           <div class="control">
-                            <input class="input" type="text" placeholder="Asunto...">
+                            <input class="input" type="text" name="subject" placeholder="Asunto...">
                           </div>
                         </div>
                       </div>
@@ -272,7 +274,7 @@
                       <div class="field-body">
                         <div class="field">
                           <div class="control">
-                            <textarea class="textarea" placeholder="Tu mensaje..."></textarea>
+                            <textarea class="textarea" name="message" placeholder="Tu mensaje..."></textarea>
                           </div>
                         </div>
                       </div>
@@ -282,7 +284,8 @@
                       <div class="field-body">
                         <div class="field">
                           <div class="control">
-                            <button class="button is-primary is-pulled-right">Enviar Mesaje</button>
+                            <button id="enviar" disabled class="button is-primary is-pulled-right">Enviar Mesaje</button>
+                            <span id="confirmation"></span>
                           </div>
                         </div>
                       </div>

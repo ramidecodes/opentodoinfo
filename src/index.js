@@ -1,7 +1,7 @@
 import './vendor.js';
 import './index.css';
-
-/* eslint-disable no-undef no-console*/
+// import nodemailer from 'nodemailer';
+/* eslint-disable no-undef, no-console*/
 // Do everything after On DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -138,62 +138,3 @@ for (var dropElement of dropdownList){
 
 });
 // End of OnDOMLoad
-
-
-
-// let index = 0;
-// for( index=0; index < dropdownList.length; index++ ) {
-//   dropdownList[index].addEventListener('click', toggleDropdown() );
-// }
-
-// var button = document.querySelector('.is-dropdown');
-// var dropdown = document.querySelector('.dropdown');
-//
-// button.addEventListener('click', function(){
-//   dropdown.classList.toggle('is-open');
-//   button.classList.toggle('is-active');
-// });
-
-   // The following code is based off a toggle menu by @Bradcomp
-   // source: https://gist.github.com/Bradcomp/a9ef2ef322a8e8017443b626208999c1
-// (function() {
-//   var burger = document.querySelector('.nav-toggle');
-//   var menu = document.querySelector('.nav-menu');
-//   burger.addEventListener('click', function() {
-//     burger.classList.toggle('is-active');
-//     menu.classList.toggle('is-active');
-//   });
-//  })();
-
-// import {getUsers, deleteUser} from './api/userApi';
-
-// Populate table of users via API call.
-// getUsers().then(result => {
-//   let usersBody = "";
-//
-//   result.forEach(user => {
-//     usersBody+= `<tr>
-//       <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
-//       <td>${user.id}</td>
-//       <td>${user.firstName}</td>
-//       <td>${user.lastName}</td>
-//       <td>${user.email}</td>
-//       </tr>`
-//   });
-//
-//   global.document.getElementById('users').innerHTML = usersBody;
-//
-//   const deleteLinks = global.document.getElementsByClassName('deleteUser');
-//
-//   // Must use array.from to create a real array from a DOM collection
-//   // getElementsByClassname only returns an "array like" object
-//   Array.from(deleteLinks, link => {
-//     link.onclick = function(event) {
-//       const element = event.target;
-//       event.preventDefault();
-//       deleteUser(element.attributes["data-id"].value);
-//       const row = element.parentNode.parentNode;
-//       row.parentNode.removeChild(row);
-//     };
-//   });
-// });

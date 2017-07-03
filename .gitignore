@@ -59,4 +59,9 @@ typings/
 
 # Distribution folder
 dist/
-src/images
+
+# Non processed images
+src/images/
+
+# Development Server
+srcServer.js

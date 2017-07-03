@@ -9,7 +9,7 @@ export default {
   context: path.resolve(__dirname, './src'),
   entry: {
     vendor: './vendor',
-    main: './index'
+    main: './index',
   },
   output: {
     path: path.resolve(__dirname, 'src'),
@@ -36,26 +36,30 @@ export default {
         use: [ 'style-loader', 'css-loader', 'sass-loader' ]
       },
       {
-    test: /\.(gif|png|jpe?g|svg)$/i,
-    loaders: [
-      'file-loader',
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        loaders: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+          }
+        ]
+      },
       {
-        loader: 'image-webpack-loader',
+        test: /\.html$/,
+        use: [ {
+          loader: 'html-loader',
+          options: {
+            minimize: true
+          }
+        }],
       }
-    ]
-  }
     ],
   },
   plugins: [
-    // new ExtractTextPlugin({
-    //   filename: '[name].bundle.css',
-    //   allChunks: true,
-    // }),
-    // new ExtractTextPlugin('styles.css')
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: true
-    })
+    }),
   ],
 };

@@ -64,4 +64,4 @@ dist/
 src/images/
 
 # Development Server
-srcServer.js
+buildScripts/srcServer.js

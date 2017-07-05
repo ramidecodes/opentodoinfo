@@ -235,7 +235,7 @@
               </div>
               <div class="column is-half">
                 <div class="contact-form-box">
-                  <form id="contact-form" class="contact-form" action="/contact" method="post">
+                  <form id="contact-form" class="contact-form" action="/contact" method="post" onsubmit="return false">
                     <div class="field is-horizontal">
                       <div class="field-body">
                         <div class="field is-grouped">
@@ -284,8 +284,9 @@
                       <div class="field-body">
                         <div class="field">
                           <div class="control">
-                            <button id="enviar" disabled class="button is-primary is-pulled-right">Enviar Mesaje</button>
-                            <span id="confirmation"></span>
+                            <button id="enviar" type="button" class="button is-primary is-pulled-right">Enviar <i class="fa fa-spinner fa-spin fa-3x fa-fw is-hidden"></i></button>
+                            <span id="confirmation" class="is-hidden">Tu mensaje está viajando por la red. En breve nos pondremos en contacto.</span>
+                            <span id="message-failed" class="is-hidden">Tu mensaje no se pudo enviar. Podes ponerte en contacto con nosotros a través de opentodoinfo@gmail.com </span>
                           </div>
                         </div>
                       </div>

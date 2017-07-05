@@ -43,7 +43,7 @@ export default {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        loaders: [
+        use: [
           'file-loader',
           {
             loader: 'image-webpack-loader',

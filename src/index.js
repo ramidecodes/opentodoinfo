@@ -1,7 +1,9 @@
 import './vendor.js';
 import './index.css';
 // import nodemailer from 'nodemailer';
+
 /* eslint-disable no-undef, no-console*/
+
 // Do everything after On DOMContentLoaded
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -9,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function(){
 const particlesConfig = {
   "particles": {
     "number": {
-      "value": 101,
+      "value": 64,
       "density": {
         "enable": true,
-        "value_area": 561.1807242438086
+        "value_area": 692
       }
     },
     "color": {
@@ -132,6 +134,7 @@ function toggleDropdown() {
   var target = this.parentNode.parentNode.querySelector(this.getAttribute('data-target'));
   target.classList.toggle('is-hidden');
 }
+// Add Event Listeners to every instance of a dropList
 for (var dropElement of dropdownList){
   dropElement.addEventListener('click', toggleDropdown );
 }

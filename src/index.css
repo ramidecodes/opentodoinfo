@@ -1,5 +1,6 @@
 /* General Styles */
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Montserrat:700');
+@@import url('https://use.fontawesome.com/200c22b598.css');
 
 body, button, input, select, textarea{
   font-family: 'Josefin Sans', sans-serif !important;
@@ -68,13 +69,13 @@ canvas {
 /* Chronogram Background */
 #chronogram{
   background: url("./images/land-green.jpg") no-repeat fixed;
-  background: url("./images/green-forest.jpg") no-repeat fixed;
+  /*background: url("./images/green-forest.jpg") no-repeat fixed;*/
   background-size: cover;
 }
  /* Card Styles */
  .card.is-minimal{
-   background-color: rgba(0, 60, 57, 0.23);
-   box-shadow: 0px 2px 6px rgba(10, 10, 10, 0.3), 0 0 0 1px rgba(10, 10, 10, 0.1);
+   background-color: rgba(60, 0, 80, 0.23);
+   box-shadow: 0px 3px 6px rgba(10, 10, 10, 0.4), 0 0 0 1px rgba(10, 10, 10, 0.1);
    color: #fff;
    border: 1px solid white;
    border-radius: 3px;

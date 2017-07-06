@@ -97,3 +97,11 @@ canvas {
  a.card-footer-item {
      font-size: 1.4rem;
  }
+
+ /* Modals */
+.modal {
+  color: #444;
+}
+.modal .modal-card-body p {
+    font-size: 1.2rem !important;
+}

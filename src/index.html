@@ -39,9 +39,31 @@
           <div class="container has-text-centered">
             <div class="columns">
               <div class="column is-half is-offset-one-quarter">
-                <p>OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.
-                  <br>
-                  <button type="button" name="Descrubre Más" class="button is-primary is-outlined is-large is-inverted">Descrubre Más</button>
+                <p>OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.</p>
+                <br>
+                <button type="button" name="Descrubre Más" data-target="#opentodo-modal" class="button is-primary is-outlined is-large is-inverted">Descrubre Más</button>
+
+                <!-- Modal Open Todo -->
+                <div id="opentodo-modal" class="modal">
+                  <div class="modal-background"></div>
+                  <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">OpenTodo - Festival de Cultura Libre</p>
+                        <button class="delete"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <p>Te invitamos a tomar conciencia de las herramientas y las redes que tenemos disponibles como seres contemporáneos. Creemos que son precisamente los vínculos que generamos en el hacer los que habilitan el desarrollo sustentable de cualquier emprendimiento.</p>
+                        <p>La mayoría de los sistemas modernos que organizan nuestra sociedad han sido construidos con bases en la desigualdad. Esto crea una condición de supervivencia que limita el descubrimiento y la expresión de la cultura libre; la cual consideramos fundamental para la exploración de nuevos modelos y nuevas soluciones a viejos problemas.</p>
+                        <p>Las nuevas tecnologías y modelos de autogestión amplían la conciencia sobre los recursos disponibles. Habilitan nuevos roles de participación para la transformación de los sistemas que rigen nuestra vida cotidiana.</p>
+                        <p>Sabemos que la capacidad transformadora de una herramienta crece exponencialmente si se desarrolla y comparte entre pares de manera abierta. El modelo de desarrollo “OpenSource” propone construir de manera horizontal,  donde todos los interesados pueden participar en el mismo nivel. Esto enriquece todo proyecto que se crea en conjunto, mientras fomenta la generación de vínculos y redes interpersonales.</p>
+                        <p>Proponemos diferentes formatos para compartir y generar colectivamente; enriquecer el diálogo interdisciplinario y vincular emprendimientos locales para actuar en conjunto sin perder la mirada global.</p>
+                        <p><strong>- La conciencia hace la diferencia -</strong></p>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
+                      </footer>
+                    </div>
+                  </div> <!-- End Modal Open Todo -->
               </div>
             </div>
           </div>
@@ -235,7 +257,7 @@
               </div>
               <div class="column is-half">
                 <div class="contact-form-box">
-                  <form id="contact-form" class="contact-form" action="/contact" method="post" onsubmit="return false">
+                  <form id="contact-form" class="contact-form" action="/contact" method="post">
                     <div class="field is-horizontal">
                       <div class="field-body">
                         <div class="field is-grouped">
@@ -284,7 +306,7 @@
                       <div class="field-body">
                         <div class="field">
                           <div class="control">
-                            <button id="enviar" type="button" class="button is-primary is-pulled-right">Enviar <i class="fa fa-spinner fa-spin fa-3x fa-fw is-hidden"></i></button>
+                            <button id="enviar" class="button is-primary is-pulled-right"><i class="fa fa-spinner fa-spin fa-3x fa-fw is-hidden"></i>Enviar</button>
                             <span id="confirmation" class="is-hidden">Tu mensaje está viajando por la red. En breve nos pondremos en contacto.</span>
                             <span id="message-failed" class="is-hidden">Tu mensaje no se pudo enviar. Podes ponerte en contacto con nosotros a través de opentodoinfo@gmail.com </span>
                           </div>

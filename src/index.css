@@ -99,9 +99,16 @@ canvas {
  }
 
  /* Modals */
-.modal {
-  color: #444;
+.modal, .modal-card-title.title, .modal-card-title span.subtitle, .modal .title, .modal .subtitle {
+  color: #444 !important;
 }
 .modal .modal-card-body p {
     font-size: 1.2rem !important;
+}
+body .modal-card {
+    max-height: calc(90vh - 80px);
+}
+.modal-card-title.title{
+    font-weight: bold;
+    margin-bottom: 0 !important;
 }

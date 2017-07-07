@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.">
-    <title>OpentTodo - Festival Independiente de Cultura Libre</title>
+    <title>OpenTodo - Festival Independiente de Cultura Libre</title>
     <link rel="shortcut icon" type="image/png" href="./images/Favicon64.png"/>
   </head>
   <body>
@@ -41,23 +41,28 @@
               <div class="column is-half is-offset-one-quarter">
                 <p>OpenTodo es un espacio de convergencia interdisciplinaria donde proponemos compartir conocimiento que libera.</p>
                 <br>
-                <button type="button" name="Descrubre Más" data-target="#opentodo-modal" class="button is-primary is-outlined is-large is-inverted">Descrubre Más</button>
+                <button type="button" name="Descubre Más" data-target="#opentodo-modal" class="button is-primary is-outlined is-large is-inverted modal-trigger">Descubre Más</button>
 
                 <!-- Modal Open Todo -->
                 <div id="opentodo-modal" class="modal">
-                  <div class="modal-background"></div>
+                  <div class="modal-background" data-target="#opentodo-modal"></div>
                   <div class="modal-card">
                       <header class="modal-card-head">
-                        <p class="modal-card-title">OpenTodo - Festival de Cultura Libre</p>
-                        <button class="delete"></button>
+                        <p class="modal-card-title title is-2">OpenTodo - <span class="subtitle is-3">Festival de Cultura Libre</span></p>
+                        <button class="delete" data-target="#opentodo-modal"></button>
                       </header>
-                      <section class="modal-card-body">
+                      <section class="modal-card-body has-text-left">
                         <p>Te invitamos a tomar conciencia de las herramientas y las redes que tenemos disponibles como seres contemporáneos. Creemos que son precisamente los vínculos que generamos en el hacer los que habilitan el desarrollo sustentable de cualquier emprendimiento.</p>
+                        </br>
                         <p>La mayoría de los sistemas modernos que organizan nuestra sociedad han sido construidos con bases en la desigualdad. Esto crea una condición de supervivencia que limita el descubrimiento y la expresión de la cultura libre; la cual consideramos fundamental para la exploración de nuevos modelos y nuevas soluciones a viejos problemas.</p>
+                        </br>
                         <p>Las nuevas tecnologías y modelos de autogestión amplían la conciencia sobre los recursos disponibles. Habilitan nuevos roles de participación para la transformación de los sistemas que rigen nuestra vida cotidiana.</p>
+                        </br>
                         <p>Sabemos que la capacidad transformadora de una herramienta crece exponencialmente si se desarrolla y comparte entre pares de manera abierta. El modelo de desarrollo “OpenSource” propone construir de manera horizontal,  donde todos los interesados pueden participar en el mismo nivel. Esto enriquece todo proyecto que se crea en conjunto, mientras fomenta la generación de vínculos y redes interpersonales.</p>
+                        </br>
                         <p>Proponemos diferentes formatos para compartir y generar colectivamente; enriquecer el diálogo interdisciplinario y vincular emprendimientos locales para actuar en conjunto sin perder la mirada global.</p>
-                        <p><strong>- La conciencia hace la diferencia -</strong></p>
+                        </br>
+                        <p class="has-text-centered"><strong>- La conciencia hace la diferencia -</strong></p>
                       </section>
                       <footer class="modal-card-foot">
                         <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
@@ -128,15 +133,45 @@
                 <footer class="card-footer">
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-calendar"></i></span>Agendar</a>
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
-                  <a class="card-footer-item"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
+                  <a class="card-footer-item modal-trigger" data-target="#hacedores-modal"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
                 </footer>
               </div>
+              <!-- Modal Feria de Hacedores -->
+              <div id="hacedores-modal" class="modal">
+                <div class="modal-background" data-target="#hacedores-modal"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                      <p class="modal-card-title title is-2">Feria de Hacedores</p>
+                      <button class="delete" data-target="#hacedores-modal"></button>
+                    </header>
+                    <section class="modal-card-body has-text-left">
+                      <h2 class="title is-3">Ven te Veo <span class="subtitle is-3">- Editorial</span></h2>
+                      <p>Ven Te Veo es una editorial independiente y artesanal de Córdoba Capital. Práctica y fomenta la autogestión, la libre circulación de conocimientos, y el trabajo en redes culturales. Participa activamente del espacio de publicaciones independientes de la Feria de La Cañada y de diversos encuentros culturales.</p>
+                      </br>
+                      <h2 class="title is-3">Casa Viva <span class="subtitle is-3">- Permacultura Orgánica</span></h2>
+                      <p>Cambiemos el mundo...</p>
+                      </br>
+                      <h2 class="title is-3">Hora Azul <span class="subtitle is-3">- Cine Club</span></h2>
+                      <p>Hora Azul Cineclub es un emprendimiento autogestionado e itinerante por la Ciudad de Córdoba.</p>
+                      <p>Proponemos un espacio de expectación, debate y encuentro entre pares fomentando la multiplicidad e intercambio de puntos de vista, sensibilidades y gustos estéticos. Concebimos nuestro cineclub como una experiencia artesanal, multidisciplinar, colaborativa y co-creativa.</p>
+                      </br>
+                      <h2 class="title is-3">Taller de escritura Creativa <span class="subtitle is-3">- Hostel Ananta</span></h2>
+                      <p>El proyecto del taller de escritura creativa es que quienes escriben sea por afición, oficio u ocio, encuentren aquí un lugar donde reconocer las herramientas que tenemos para expresar de manera casi lúdica eso que nos atraviesa y necesitamos poner afuera con palabras.</p>
+                      </br>
+                    </section>
+                    <footer class="modal-card-foot">
+                      <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
+                    </footer>
+                  </div>
+                </div>
+              <!-- Fin Modal Feria de Hacedores -->
+
               <br>
               <div class="card is-minimal">
                 <header class="card-header">
                   <a class="card-header-icon dropdown-toggle" data-target="#card-content-3">
                     <p class="card-header-title">
-                      18 hs - Taller de Herramientas para la Auto-gestión
+                      18 hs - Taller de Herramientas Digitales para la Auto-gestión
                     </p>
                     <span class="icon">
                       <i class="fa fa-angle-down"></i>
@@ -146,7 +181,7 @@
                 <div id="card-content-3" class="card-content is-hidden">
                   <div class="content">
                     <p>Próximamente.</p>
-                    <p><a href="https://twitter.com/eco_virtual" target="_blank">@eco_virtual</a> <a>#OpenSource</a> <a>#HerramientasDigitales</a></p>
+                    <p><a href="https://twitter.com/eco_virtual" target="_blank">@eco_virtual</a> <a href="https://twitter.com/sabrinatol" target="_blank">@SabrinaTol</a> <a>#OpenSource</a> <a>#HerramientasDigitales</a></p>
                     <br>
                     <p><strong>18 hs - 15 Jul 2017</strong></p>
                   </div>
@@ -154,10 +189,30 @@
                 <footer class="card-footer">
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-calendar"></i></span>Agendar</a>
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
-                  <a class="card-footer-item"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
+                  <a class="card-footer-item modal-trigger" data-target="#herramientas-modal"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
                 </footer>
               </div>
-              <br>
+              <!-- Modal Herramientas Digitales -->
+              <div id="herramientas-modal" class="modal">
+                <div class="modal-background" data-target="#herramientas-modal"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                      <h3 class="modal-card-title title is-3">Taller de Herramientas Digitales</br> para la Auto-Gestion</h3>
+                      <button class="delete" data-target="#herramientas-modal"></button>
+                    </header>
+                    <section class="modal-card-body has-text-left">
+                      <p>La era de la información hizo posible descentralizar el trabajo en equipo, introdujo nuevos modelos de participación, de producción para bienes y servicios culturales tanto como comerciales.</p>
+                      </br>
+                      <p>Nos encontramos en una transición de paradigmas y existen herramientas que permiten a los emprendedores y hacedores contemporáneos organizarse y administrar sus emprendimientos de manera ágil y eficiente.</p>
+                      </br>
+                      <p>El taller explora un conjunto de herramientas gratuitas disponibles online y modelos de uso efectivo que fomentan la participación colaborativa y la organización descentralizada de proyectos.</p>
+                    </section>
+                    <footer class="modal-card-foot">
+                      <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
+                    </footer>
+                  </div>
+                </div>
+              <!-- Fin Modal Herramientas Digitale -->
             </div>
 
             <div class="column is-half">
@@ -184,9 +239,38 @@
                 <footer class="card-footer">
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-calendar"></i></span>Agendar</a>
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
-                  <a class="card-footer-item"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
+                  <a class="card-footer-item modal-trigger" data-target="#charlas-modal"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
                 </footer>
               </div>
+              <!-- Modal Charlas Maestras -->
+              <div id="charlas-modal" class="modal">
+                <div class="modal-background" data-target="#charlas-modal"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                      <p class="modal-card-title title is-2">Charlas Maestras</p>
+                      <button class="delete" data-target="#charlas-modal"></button>
+                    </header>
+                    <section class="modal-card-body has-text-left">
+                      <h3 class="title is-3">Jorge Mojila <span class="subtitle is-3">- Ingeniero Electrónico</span></h3>
+                      <p>Espectros de frecuencia solar</p>
+                      </br>
+                      <h3 class="title is-3">Walter Krainbuhl <span class="subtitle is-3">- Psicólogo</span></h3>
+                      <p>Psicoterapia Conductual con Realidad Virtual</p>
+                      </br>
+                      <h3 class="title is-3">Katerina Wildova <span class="subtitle is-3">- Antropóloga</span></h3>
+                      <h4 class="subtitle is-4">Streaming desde Praga, República Checa</h4>
+                      <p>Economías Locales Sustentables</p>
+                      </br>
+                      <h3 class="title is-3">Juanse<span class="subtitle is-3"></span></h3>
+                      <p>Uso de monedas autogestionadas - FairCoin</p>
+                      </br>
+                    </section>
+                    <footer class="modal-card-foot">
+                      <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
+                    </footer>
+                  </div>
+                </div>
+              <!-- Fin Modal Charlas Maestras -->
               <br>
               <div class="card is-minimal">
                 <header class="card-header">
@@ -212,9 +296,30 @@
                 <footer class="card-footer">
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-calendar"></i></span>Agendar</a>
                   <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
-                  <a class="card-footer-item"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
+                  <a class="card-footer-item modal-trigger" data-target="#panel-modal"><span class="icon"><i class="fa fa-link"></i></span>Conocer Más</a>
                 </footer>
               </div>
+              <!-- Modal Panel Picante -->
+              <div id="panel-modal" class="modal">
+                <div class="modal-background" data-target="#panel-modal"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                      <h3 class="modal-card-title title is-3">Uso consciente de psicodélicos</br>y Plantas Maestras</h3>
+                      <button class="delete" data-target="#panel-modal"></button>
+                    </header>
+                    <section class="modal-card-body has-text-left">
+                      <p>En un formato de panel moderado con audiencia activa, invitamos al diálogo a expertos y aficionados, a quienes tengan experiencia directa y curiosidad intelectual. Son los diferentes puntos de vista la clave para enriquecer el debate sin limitarnos con juicios morales.</p>
+                      </br>
+                      <h3 class="subtitle is-3">Moderadores</h3>
+                      <p>Walter Carlos Krainbuhl - Psicólogo</p>
+                      <p>Natalia Luna Roja - Terapeuta</p>
+                    </section>
+                    <footer class="modal-card-foot">
+                      <a class="card-footer-item"><span class="icon"><i class="fa fa-share-alt"></i></span>Compartir</a>
+                    </footer>
+                  </div>
+                </div>
+              <!-- Fin Modal Herramientas Digitale -->
               <br>
               <div class="card is-minimal">
                 <header class="card-header">

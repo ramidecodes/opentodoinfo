@@ -2,10 +2,15 @@ import express from 'express';
 import path from 'path';
 import open from 'open';
 import compression from 'compression';
-/* eslint-disable no-console */
+import nodemailer from 'nodemailer';
+import bodyParser from 'body-parser';
+/* eslint-disable no-console, no-unused-vars */
 
 const port = 3000;
 const app = express();
+
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.use(compression());
 app.use(express.static('dist'));
@@ -13,20 +18,50 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
-// API call
-// Hard coding for simplicity. Pretend this hits a real database
-// app.get('/users', function(req, res) {
-//   res.json([
-//     {"id": 1,"firstName":"Bob","lastName":"Smith","email":"bob@gmail.com"},
-//     {"id": 2,"firstName":"Tammy","lastName":"Norton","email":"tnorton@yahoo.com"},
-//     {"id": 3,"firstName":"Tina","lastName":"Lee","email":"lee.tina@hotmail.com"}
-//   ]);
-// });
-
 app.listen(port, function(err){
   if (err) {
     console.log(err);
   } else {
     open('http://localhost:' + port);
   }
+});
+
+// SetUp Email Sender
+app.post('/contact', function(req,res) {
+
+
+  var name = req.body.name;
+  var email = req.body.email;
+  var subject = req.body.subject;
+  var message = req.body.message;
+
+  var mailOptions = {
+     to : "ramiro.ecovirtual@gmail.com",
+     from: {
+       name: name,
+       address: email},
+     sender: email,
+     replyTo: email,
+     subject : subject,
+     text : message
+  }
+
+  const smtpTransporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: "smtp.gmail.com",
+    auth: {
+      user: "",
+      pass: ""
+    }
+  });
+
+  smtpTransporter.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+      res.send("error");
+    }else{
+      res.send("Enviado");
+    }
+  });
+
 });

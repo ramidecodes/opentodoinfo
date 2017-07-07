@@ -130,11 +130,11 @@ function toggleDropdown() {
 }
 
 // Toggle behaviour for Modals
-var modalsList = document.body.querySelectorAll('.modal');
+var modalTriggerList = document.body.querySelectorAll('.modal-trigger');
+var modalCloseList = document.body.querySelectorAll('button.delete, .modal-background');
 
 function toggleModal() {
-  var target = this.parentNode.querySelector(this.getAttribute('data-target'));
-  console.log(target);
+  var target = document.querySelector(this.getAttribute('data-target'));
   target.classList.toggle('is-active');
 }
 
@@ -151,8 +151,13 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     // Add Event Listeners to every instance of a modal trigger
-    for (var modalElement of modalsList){
-      modalElement.addEventListener('click', toggleModal );
+    for (var modalTrigger of modalTriggerList){
+      modalTrigger.addEventListener('click', toggleModal );
+    }
+
+    // Add Event Listeners to close Modals
+    for (var modalClose of modalCloseList){
+      modalClose.addEventListener('click', toggleModal );
     }
 
     // Handle From Submition with AJAX

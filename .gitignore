@@ -65,3 +65,6 @@ src/images/
 
 # Development Server
 buildScripts/srcServer.js
+
+# Production Server
+buildScripts/distServer.js

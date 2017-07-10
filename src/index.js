@@ -1,6 +1,6 @@
 import './vendor.js';
 import './index.css';
-// import nodemailer from 'nodemailer';
+import './images/Favicon64.png';
 
 /* eslint-disable no-undef, no-console*/
 // Setup Particles Configuration and initialize it

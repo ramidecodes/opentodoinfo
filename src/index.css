@@ -112,3 +112,12 @@ body .modal-card {
     font-weight: bold;
     margin-bottom: 0 !important;
 }
+
+/* Footer */
+body .footer {
+    background-color: #222222;
+    padding: 1rem 1.5rem 1rem;
+}
+body .footer p  {
+    color: white;
+}

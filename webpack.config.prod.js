@@ -78,6 +78,7 @@ export default {
     // Create HTML file that includes reference to bundled JS.
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      favicon: 'src/Favicon64.png',
       minify: {
         removeComments: true,
         collapseWhitespace: true,

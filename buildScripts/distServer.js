@@ -1,13 +1,15 @@
-import express from 'express';
-import path from 'path';
-import open from 'open';
-import compression from 'compression';
-import nodemailer from 'nodemailer';
-import bodyParser from 'body-parser';
+var express = require('express');
+var path = require('path');
+var open = require('open');
+var compression = require('compression');
+var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
 /* eslint-disable no-console, no-unused-vars */
 
-const port = 3000;
-const app = express();
+process.env.NODE_ENV = 'production'
+
+var port = 3000;
+var app = express();
 
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
@@ -46,7 +48,7 @@ app.post('/contact', function(req,res) {
      text : message
   }
 
-  const smtpTransporter = nodemailer.createTransport({
+  var smtpTransporter = nodemailer.createTransport({
     service: 'gmail',
     host: "smtp.gmail.com",
     auth: {

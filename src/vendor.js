@@ -17,3 +17,4 @@
 import fetch from 'whatwg-fetch';
 import bulma from 'bulma';
 import particlesJS from 'particles.js';
+import Sharer from 'sharer.js';

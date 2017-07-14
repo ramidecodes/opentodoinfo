@@ -97,8 +97,13 @@ canvas {
  a.card-footer-item {
      font-size: 1.4rem;
  }
+ /* Esgsg */
 
  /* Modals */
+ body .modal .modal-background {
+   background-color: rgba(42, 89, 108, 0.83);
+ }
+
 .modal, .modal-card-title.title, .modal-card-title span.subtitle, .modal .title, .modal .subtitle {
   color: #444 !important;
 }
